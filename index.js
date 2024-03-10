@@ -38,6 +38,9 @@ async function checkweather(city){
             else if (data.weather[0].main == "Haze" ){
                 weatherIcon.src = "images/haze.png"
             }
+            else if (data.weather[0].main == "Smoke" ){
+                weatherIcon.src = "images/smoke.png"
+            }
 
             document.querySelector(".weather-name").innerHTML =  data.weather[0].main;
             document.querySelector(".city").innerHTML =  cityName;
@@ -51,6 +54,7 @@ async function checkweather(city){
             document.querySelector(".city").innerHTML = "City not found!";
             document.querySelector(".humidy").innerHTML = `0 %`;
             document.querySelector(".wind").innerHTML = `0 km/h`;
+            document.querySelector(".weather-name").innerHTML = ``;
             console.log("City not found!")
         }
 
